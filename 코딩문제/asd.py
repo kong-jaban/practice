@@ -116,32 +116,31 @@
 #         a==00
 #         print(a, b-45)
 
-#2525번 #오븐시계
-a,b = map(int,input().split())
-c = int(input())
-#a가 0시로 넘어갈때
-#a가 0시로 넘어가지 않을때
-a = input()
-b = int(input())
-a = a.split()
+# #2525번 #오븐시계
 
-i = int(a[0])
-j = int(a[1])
+# #a가 0시로 넘어갈때
+# #a가 0시로 넘어가지 않을때
+# a = input()
+# b = int(input())
+# a = a.split()
 
-x = b//60
-y = b%60
+# i = int(a[0])
+# j = int(a[1])
 
-if i + x >= 24:
-    if j + y >= 60:
-        print(i+x-24+1, j+y-60)
-    else:
-        print(i+x-24, j+y)
-else:
-    if j + y >= 60 and i + x + 1 >= 24:
-        print(0, j+y-60)
-    elif j + y >= 60:
-        print(i+x+1, j+y-60)
-    else:
-        print(i+x, j+y)
+# x = b//60
+# y = b%60
+
+# if i + x >= 24:
+#     if j + y >= 60:
+#         print(i+x-24+1, j+y-60)
+#     else:
+#         print(i+x-24, j+y)
+# else:
+#     if j + y >= 60 and i + x + 1 >= 24:
+#         print(0, j+y-60)
+#     elif j + y >= 60:
+#         print(i+x+1, j+y-60)
+#     else:
+#         print(i+x, j+y)
     
     

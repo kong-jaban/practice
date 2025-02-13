@@ -46,18 +46,56 @@
 # a.clear()
 # print(a) #[]
 
-# 요소 정렬: sort()
-a= [52, 372, 9, 7, 103, 13, 501, 231]
+# # 요소 정렬: sort()
+# a= [52, 372, 9, 7, 103, 13, 501, 231]
 
-a.sort()
-print(a) #오름차순 출력
+# a.sort()
+# print(a) #오름차순 출력
 
-a.sort(reverse=True)
-print(a) #내림차순 출력
+# a.sort(reverse=True)
+# print(a) #내림차순 출력
 
 
-# 요소 존재 확인: in, not in
-print(52 in a) #True
-print(0 in a) # False
-print(52 not in a) #False
+# # 요소 존재 확인: in, not in
+# print(52 in a) #True
+# print(0 in a) # False
+# print(52 not in a) #False
 
+# for 반복문
+# 형태 -> for 반복변수 in 리스트:
+#           복합구문
+ #반복변수 에 a의 요소가 하나하나 들어감. 
+
+# a= [1,2,3,4,5]
+#     #총합 구하기
+# sum=0 #더할 변수 초기화 /선언
+# for i in a:
+#     sum = sum + i
+# print(sum)
+#     #총곱 구하기
+# prod=1 #곱할 변수 초기화/선언
+# for i in a:
+#     prod = prod * i
+# print(prod)
+
+# 중복리스트
+# #2차원리스트
+# a= [[1,2,3],[4,5,6,7],[8,9]]
+# for i in a:
+#     print(i)
+#     for j in i:
+#         print(j)
+
+# # 전개연산자
+# # *리스트 = 요소,요소,요소
+# ## (1)리스트 내부
+# a=[1,2,3]
+# b=[*a, *a, *a] #[1,2,3,1,2,3,1,2,3]
+# print(b)
+# #append활용
+# a = [1,2,3]
+# b=[*a, 4] #[1,2,3,4]
+
+## (2) 함수의 매개변수 위치
+date= [2022, 8, 10,14,14]
+print("{}년{}월{}일{}시{}분".format(*date))

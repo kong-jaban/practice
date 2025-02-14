@@ -96,6 +96,120 @@
 # a = [1,2,3]
 # b=[*a, 4] #[1,2,3,4]
 
-## (2) 함수의 매개변수 위치
-date= [2022, 8, 10,14,14]
-print("{}년{}월{}일{}시{}분".format(*date))
+# ## (2) 함수의 매개변수 위치
+# date= [2022, 8, 10,14,14]
+# print("{}년{}월{}일{}시{}분".format(*date))
+
+# list_a = [1,2,3,4]
+# list_a.extend(list_a*2)
+# print(list_a)# [1,2,3,4,1,2,3,4,1,2,3,4]
+
+# numbers= [273, 103, 5,32, 62, 90,9, 72, 900]
+# #100이상의 수
+# for number in numbers:
+#     if number > 100:
+#         print(number)
+        
+# for number in numbers:
+#     if number %2 == 0:
+#         print(f"{number}은/는 짝수입니다.")
+#     else : print(f"{number}은/는 홀수입니다. ")
+#     print(f"{number}은/는 {len(str(number))}자리수입니다.")
+
+# # 나머지값으로 주기성 만들기
+# numbers = [1,2,3,4,5,6,7,8,9]
+# output = [[],[],[]]
+# for number in numbers :
+#     output[(number-1)%3].append(number)
+# print(output)
+
+####################################
+# #4-2 딕셔너리
+# product = {
+#     # 키: 값,
+#     # 키: 값,
+#     # 키: 값 ...
+#     "제품명": "건망고 슬라이스",
+#     "가격": 4000,
+#     "분류": "식품",
+#     10: 20
+# }
+# print(product["가격"],product["제품명"], product[10])
+
+#  ##딕셔너리에 추가/제거
+# product = {
+#     "name": "7D건조망고",
+#     "type": "당절임"
+# }
+# # 요소의 값을 변경
+# product["name"] = "8D건조망고"
+# # 요소를 추가
+# product["price"] = 8000
+# # 요소 제거
+# del product["type"]
+# # 키의 존재를 확인하기
+# #  #get()
+# print("type" in product)
+# print(product.get("name"), product.get(type)) #없을경우 None을 출력
+# print(product)
+# for products in product:
+#     print(products) #key값들이 출력됨. 
+
+#  ##for 반복분 딕셔너리ver.
+# for key in product:
+#     print(key)
+#     print(product[key])
+#     print("-"*20)
+
+# #문제풀이
+# #1. 숫자가 몇번 등장하는지 출력하는 코드
+# numbers= [1,2,6,8,4,3,2,1,9,4,5,4,6,8,9,1,3,5,7,3,3,4]
+# counter= {}
+# #(1) 요소의 출현을 확인
+# for number in numbers:
+#     counter[number] = 0 #counter딕셔너리 만들어주는 작업. 아무것도 없는곳에 1을 더할수 없어..
+# #(2) 해당 요소의 빈도를 확인
+# for number in numbers :
+#     counter[number] += 1
+# #(1), (2) 결합
+# for number in numbers:
+#     if number not in counter:
+#         counter[number] =0
+#     counter[number] += 1
+# print(counter)
+# #정렬까쥐
+#    #키 기준 정렬
+# for key in sorted(counter.keys()):
+#     print(f"{key}: {counter[key]}")
+#    #value 기준 정렬 @@@미숙@@@
+# for key, value in sorted(counter.items(), key=lambda x:x[1]):
+#     print(f"{key}: {value}")
+
+#활용예제. (딕셔너리 내부 딕셔너리, 리스트 등)
+#딕셔너리
+character = {
+    "name": "기사",
+    "level": 12,
+    "items": {
+        "sword": "불꽃검",
+        "armor": "풀갑옷"
+    },
+    "skills": ["베기", "종베기", "횡베기"]
+}
+# for 반복문으로 나열
+for key in character:
+    if type(character[key]) is dict: #요소가 딕셔너리타입일때
+        # print(character[key])
+        for 키 in character[key]:
+            print(f"{키} : {character[key][키]}") #한번더 요소접근
+        # for 키, 값 in character[key].items():
+        #     print(f"{키} : {값}")     #위 코드와 동일한 결과
+        
+    elif type(character[key]) is list: #요소가 리스트일때
+        for 요소 in character[key]:
+            print(f"skills : {요소}")
+    #딕셔너리일때와 리스트 일때 차이?
+    #딕셔너리반복문에서는 반복 변수에 키가 들어감. 
+    #리스트에서는 반복 변수에 요소 자체가 들어감.
+    else:
+        print(f"{key} : {character[key]}")

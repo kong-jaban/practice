@@ -185,31 +185,31 @@
 # for key, value in sorted(counter.items(), key=lambda x:x[1]):
 #     print(f"{key}: {value}")
 
-#활용예제. (딕셔너리 내부 딕셔너리, 리스트 등)
-#딕셔너리
-character = {
-    "name": "기사",
-    "level": 12,
-    "items": {
-        "sword": "불꽃검",
-        "armor": "풀갑옷"
-    },
-    "skills": ["베기", "종베기", "횡베기"]
-}
-# for 반복문으로 나열
-for key in character:
-    if type(character[key]) is dict: #요소가 딕셔너리타입일때
-        # print(character[key])
-        for 키 in character[key]:
-            print(f"{키} : {character[key][키]}") #한번더 요소접근
-        # for 키, 값 in character[key].items():
-        #     print(f"{키} : {값}")     #위 코드와 동일한 결과
+# #활용예제. (딕셔너리 내부 딕셔너리, 리스트 등)
+# #딕셔너리
+# character = {
+#     "name": "기사",
+#     "level": 12,
+#     "items": {
+#         "sword": "불꽃검",
+#         "armor": "풀갑옷"
+#     },
+#     "skills": ["베기", "종베기", "횡베기"]
+# }
+# # for 반복문으로 나열
+# for key in character:
+#     if type(character[key]) is dict: #요소가 딕셔너리타입일때
+#         # print(character[key])
+#         for 키 in character[key]:
+#             print(f"{키} : {character[key][키]}") #한번더 요소접근
+#         # for 키, 값 in character[key].items():
+#         #     print(f"{키} : {값}")     #위 코드와 동일한 결과
         
-    elif type(character[key]) is list: #요소가 리스트일때
-        for 요소 in character[key]:
-            print(f"skills : {요소}")
-    #딕셔너리일때와 리스트 일때 차이?
-    #딕셔너리반복문에서는 반복 변수에 키가 들어감. 
-    #리스트에서는 반복 변수에 요소 자체가 들어감.
-    else:
-        print(f"{key} : {character[key]}")
+#     elif type(character[key]) is list: #요소가 리스트일때
+#         for 요소 in character[key]:
+#             print(f"skills : {요소}")
+#     #딕셔너리일때와 리스트 일때 차이?
+#     #딕셔너리반복문에서는 반복 변수에 키가 들어감. 
+#     #리스트에서는 반복 변수에 요소 자체가 들어감.
+#     else:
+#         print(f"{key} : {character[key]}")

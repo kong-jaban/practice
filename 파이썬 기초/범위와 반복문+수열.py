@@ -53,12 +53,46 @@
 #         a[n] = a[n-1] +2 #동적계획법. (이전항을 이용해서 표현)
 # print(a)
 
-#피보나치수열 구하기
-N=100
-a=[None] * (N+1)
-for n in range(1, N+1):
-    if n ==1 or n==2:
-        a[n]=1
-    else:
-        a[n] = a[n-1] +a[n-2] #동적계획법. (이전항을 이용해서 표현)
-print(a)
+# #피보나치수열 구하기
+# N=100
+# a=[None] * (N+1)
+# for n in range(1, N+1):
+#     if n ==1 or n==2:
+#         a[n]=1
+#     else:
+#         a[n] = a[n-1] +a[n-2] #동적계획법. (이전항을 이용해서 표현)
+# print(a)
+
+# reversed()
+# 매개변수 : 반복가능한 것
+# 결과: 그것을 뒤집은 것
+# 결과 자료형 : 이터레이터
+# -> list()를 사용해 리스트로 변환해서 결과보기
+
+# #리스트
+# print(list(reversed([1,2,3,4,5])))
+# #범위
+# print(list(reversed(range(0,10))))
+
+# for i in reversed(range(0,10)) :
+#     print(i)
+
+# 반복문으로 피라미드만들기
+H= 10
+# #기본
+# for i in range(1, H+1):
+#     print("*"*i)
+# #심화 1
+# for i in range(H+1):
+#     result = ""
+#     for j in range(i):
+#         result += "*"  
+#     print(result)   
+#심화 2
+
+for i in range(H+1):
+    result = ""
+    result += " "*(H-i)
+    result += "*"*(2*i-1)
+    
+    print(result)

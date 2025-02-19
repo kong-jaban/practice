@@ -143,4 +143,65 @@
 #     else:
 #         print(i+x, j+y)
     
-    
+  #8393번 #합 문제
+# 문제
+# n이 주어졌을 때, 1부터 n까지 합을 구하는 프로그램을 작성하시오.
+
+# 입력
+# 첫째 줄에 n (1 ≤ n ≤ 10,000)이 주어진다.
+
+# 출력
+# 1부터 n까지 합을 출력한다.
+
+# n= int((input()))
+# b=0
+# for i in range(0, n+1):
+#     b += i
+# print(b)
+
+    #25304번 영수증 문제
+# 구매한 각 물건의 가격과 개수
+# 구매한 물건들의 총 금액
+# 을 보고, 구매한 물건의 가격과 개수로 계산한 총 금액이 영수증에 적힌 총 금액과 일치하는지 검사해보자.
+# 입력
+# 첫째 줄에는 영수증에 적힌 총 금액 
+# $X$가 주어진다.
+
+# 둘째 줄에는 영수증에 적힌 구매한 물건의 종류의 수 
+# $N$이 주어진다.
+
+# 이후 
+# $N$개의 줄에는 각 물건의 가격 
+# $a$와 개수 
+# $b$가 공백을 사이에 두고 주어진다.
+
+# 출력
+# 구매한 물건의 가격과 개수로 계산한 총 금액이 영수증에 적힌 총 금액과 일치하면 Yes를 출력한다. 일치하지 않는다면 No를 출력한다.
+# X= int(input())
+# N= int(input())
+# total = 0
+# for i in range(1, N+1):
+#     a,b = map(int,input().split())
+#     total += a*b
+# # print(A,B)
+# if X == total:
+#     print("Yes")
+# else: print("No")
+
+#long출력문제
+# N=int(input())
+# if N%4==0:
+#     print(N//4*"long ","int", sep="")
+
+#     #10951번
+# A,B = map(int, input().split())
+#     #10952번
+# c=[]
+# while True:
+#     a,b= map(int, input().split())
+#     if (a and b) !=0:
+#         c.append(a+b)
+#     else :
+#         break
+# for i in range(0, len(c)):
+#     print(c[i])

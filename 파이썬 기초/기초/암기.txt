@@ -1,0 +1,17 @@
+@ enumerate() 함수
+fruits = ["바나나", "사과", "포도"]
+i =0
+for fruit in fruits:
+    print(fruit)
+#enumerate() 사용시 > [(), (), ()] 형태 (튜플)
+# 튜플 내부의 형태는 [(인덱스, 값),(인덱스, 값)]
+for fruit in enumerate(fruits):
+    print(fruit[0], fruit[1])
+# 형식 
+# for 인덱스, 값 in enumerate(리스트)
+for i, fruit in enumerate(fruits):
+    print(i, fruit)
+
+@ "문자열".count("값")
+ > 문자열에 값이 몇개들어있는지 알려줌. 
+# 문자열에 값이 포함된 개수 셀때 사용

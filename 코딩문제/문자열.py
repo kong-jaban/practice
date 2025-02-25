@@ -13,9 +13,9 @@
 # a=input()
 # print(len(a))
 
-#첫글자,마지막글자 출력
-s=int(input())
-for _ in range(s):
-  s = input()
-  print(s[0]+s[-1])
+# #첫글자,마지막글자 출력
+# s=int(input())
+# for _ in range(s):
+#   s = input()
+#   print(s[0]+s[-1])
 

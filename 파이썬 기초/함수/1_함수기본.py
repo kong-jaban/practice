@@ -142,4 +142,48 @@
 #     elif n>= 2:
 #         return n*factorial(n-1) #함수 내부에서 함수를 호출(재귀함수)
 # print(factorial(5))
+
 #58강 재귀함수(2) : 피보나치 수열
+#피보나치수열
+# a_1=1
+# a_2=2
+# a_n=a_{n-1} +a{n-2}
+#함수로 표현하면>>
+# def f(n):
+#     if n ==1:
+#         return 1
+#     elif n==2:
+#         return 1
+#     else:
+#         return f(n-1)+f(n-2)
+# print(f(50))
+# > 실행 굉장히 느림.. n-1과 n-2를 구하고 그에 해당하는 값에도 각각 n-1과n-2를 구해야하기 때문..
+#쓸데 없는 계산이 많음. 중복계산도 많음..
+
+# #메모화 : memo에 값을 저장해서 중복되는 계산을 없앨 수 있음. 
+# memo={1:1, 2:1} #1,2번째 항은 1인것을 미리 입력. 밑에 if문 줄일수있음. 
+# # memo={}
+# def f(n):
+#     if n in memo:
+#         return memo[n]
+#     # if n ==1:
+#     #     return 1
+#     # elif n==2:
+#     #     return 1
+#     else:
+#         temp = f(n-1)+f(n-2)
+#         memo[n]= temp
+#         return temp
+# print(f(50))
+##################################
+#59강 - 조기리턴과 평탄화
+data = [[1,2,3],[4,[5,6]],7,[8,9]]
+def flatten(data):
+    output = []
+    for item in data:
+        if type(item) ==list :
+            output.extend(flatten(item)) #재귀함수로서 기능
+        else:
+            output.append(item)
+    return output
+print(flatten(data))

@@ -107,25 +107,67 @@
 #     if 숫자 %2 ==1
 # ])
 ############################
-#62강 - map/filter 함수 직접 구현하기
-    #map()
-def my_map(콜백함수, 리스트):
-    output = []
-    for 요소 in 리스트:
-        output.append(콜백함수(요소))
-    return output
-def power(숫자):
-    return 숫자 **2
-A=[1,2,3,4,5]
-print(my_map(power, A))
+# #62강 - map/filter 함수 직접 구현하기
+#     #map()
+# def my_map(콜백함수, 리스트):
+#     output = []
+#     for 요소 in 리스트:
+#         output.append(콜백함수(요소))
+#     return output
+# def power(숫자):
+#     return 숫자 **2
+# A=[1,2,3,4,5]
+# print(my_map(power, A))
 
-    #filter()
-def my_filter(콜백함수, 리스트):
-    output = []
-    for 요소 in 리스트:
-        if 콜백함수(요소) : # == True
-            output.append(요소)
-    return output
-def is_odd(숫자):
-    return 숫자%2 == 1
-print(my_filter(is_odd, A))
+#     #filter()
+# def my_filter(콜백함수, 리스트):
+#     output = []
+#     for 요소 in 리스트:
+#         if 콜백함수(요소) : # == True
+#             output.append(요소)
+#     return output
+# def is_odd(숫자):
+#     return 숫자%2 == 1
+# print(my_filter(is_odd, A))
+############################
+# 63강 - 람다, key 키워드 매개변수
+#람다 : 간단한 함수를 간단하게 해주는 문법
+
+# # 일반함수
+# def power(숫자):
+#     return 숫자 **2
+# def is_odd(숫자):
+#     return 숫자 %2 ==1
+## >> 간단한 코드인데 너무 김. 간단하게 해줄수 있는 방법이 바로 '람다'.
+# # 람다를 사용
+# power = lambda 숫자: 숫자**2
+# is_odd = lambda 숫자 : 숫자%2 ==1
+# print(power(10)) #100
+# print(is_odd(7)) #True
+
+# #람다를 인라인 함수로 사용하기 (함수에 꽂아넣음)
+# A=[1,2,3,4,5]
+# 이터레이터 = map(lambda 숫자 : 숫자**2, A)
+# print(list(이터레이터))
+
+# 이터레이터 = filter(lambda 숫자: 숫자%2==1, A)
+# print(list(이터레이터))
+
+ #key키워드
+A= [{
+    "제목": "파이썬",
+    "가격": 18000
+},{
+    "제목": "파이썬+자바",
+    "가격": 26000
+},{
+    "제목": "파이썬+스파크",
+    "가격": 20000
+}]
+print(min(A, key=lambda 북: 북["가격"]))
+print(max(A, key=lambda 책: 책["가격"])["가격"]) #가격만 뽑고싶을때
+#sort도 가능.
+# 가격 상위 2개 항목
+top_2 = sorted(A, key=lambda 책: 책["가격"], reverse=True)[:2]
+print(top_2)
+

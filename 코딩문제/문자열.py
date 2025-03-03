@@ -19,3 +19,23 @@
 #   s = input()
 #   print(s[0]+s[-1])
 
+# #11654번 아스키코드
+
+# #ord(문자) : 아스키 코드를 반환해준다
+# #chr(숫자) : 숫자에 맞는 아스키코드를 반환한다.
+
+# A=input()
+
+# if type(A) == int:
+#     print(chr(A))
+# elif type(A) == str:
+#     print(ord(A))
+
+# # 11720번 숫자의 합
+
+# A=int(input())
+# B=input()
+# C=[]
+# for i in range(A):
+#     C.append(int(B[i]))
+# print(sum(C))

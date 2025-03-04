@@ -1,0 +1,50 @@
+ 72강 - 구문 오류와 예외
+
+ #오류 (Error)
+ - Syntax Error[Compiler error]: 프로그램 실행 전에 발생하는 오류
+
+ # 예외 (Exception)
+ - Runtime Error[Exception]: 프로그램 실행 중에 발생하는 오류
+
+
+73강 - 기본적인 예외처리 방법
+
+if - else 문으로 예외처리
+try : except: 문으로 예외처리 (예외가 발생할 가능성이 있는 경우 사용.)
+
+75강 - 예외 처리의 else finally 구문
+try: #예외가 발생할 가능성이 있는 코드
+except: #예외가 발생했을 때 실행할 코드
+else:  #예외가 발생하지 않았을 때 실행할 코드
+finally: #무조건 실행하는 코드
+
+->else쪽은 잘 안쓰임.
+  >>> else쪽에 쓰일 구문을 그냥 try에 사용하면 됨.
+
+finally !! 아주 유용함. 
+->함수의 진입 여부/완료여부 파악이 가능함. return이 있어도 finally구문은 실행됨.
+for반복문에서 continue나 break를 만나도 실행함.
+ ex> 파일을 열었을때 finally로 close가능함.
+
+@@76강 - 예외 객체와 예외 구분
+#누가 언제 어디서 무엇을 어떻게 왜?
+#예외 객체 : 예외와 관련된 정보를 담고 있는 객체
+try:
+except 예외의 종류 as 예외객체의변수이름:
+    #NameError as e
+    #IndexError as Exception
+    #ValueError
+    # >Exception
+ex))
+try:
+    asdasd[0]
+except Exception as e:
+    print(type(e))
+    print()
+
+77강 - 예외 강제 발생과 6장 마무리
+#raise Exception() >> 예외를 강제로 발생시킴. 
+Why? 다른개발자에게 정보를 전달하기 위함. 미구현상태 등.
+
+
+@@Github에서 코드

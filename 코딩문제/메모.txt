@@ -1,0 +1,20 @@
+# #for index, value in enumerate(iterable):
+# # 인덱스와 값을 반환하는 enumerate
+
+range(시작,끝[,step])
+
+reverse 와 reversed차이?
+모두 리스트의 요소를 뒤집을 때 사용함. 
+
+# [list].reverse() 
+reverse는 list타입에서 제공. but 값을 반환하지 XX. > 변수에 값을 담을 수 없음.
+ex) B=A.reverse() >> #None
+print(A.reverse()) >> #None
+print(A) 했을때 변환된 값 나옴.
+->값을 반환하지 않으며, 리스트의 원형을 바꿈.(파괴적)
+
+# reversed([list])
+리스트뿐 아니라 튜플, 스트링, 딕셔너리에서도 사용 가능. 
+값을 반환하며 객체의 값으로 반환. 
+->해당객체의 값을 반환하며, 원형을 바꾸지 않음. (비파괴적)
+

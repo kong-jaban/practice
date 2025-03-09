@@ -60,17 +60,40 @@
 # else:
 #     print(most_common[0][0])
 
-#크로아티아알파벳
-# 크로아티아 알파벳 리스트
-# 크로아티아 알파벳 리스트 (길이가 긴 알파벳부터 순서대로 처리)
-croatia_alphabets = ['dz=', 'c=', 'c-', 'd-', 'lj', 'nj', 'z=']
+# #크로아티아알파벳
+# # 크로아티아 알파벳 리스트
+# # 크로아티아 알파벳 리스트 (길이가 긴 알파벳부터 순서대로 처리)
+# croatia_alphabets = ['dz=', 'c=', 'c-', 'd-', 'lj', 'nj', 'z=']
 
-# 입력받은 문자열
-word = input()
+# # 입력받은 문자열
+# word = input()
 
-# 크로아티아 알파벳을 하나의 문자로 취급하여 처리
-for alphabet in croatia_alphabets:
-    word = word.replace(alphabet, '*')  # 크로아티아 알파벳을 '*'로 대체
-    # print(word)
-# '*'로 대체된 문자열에서 알파벳 개수를 셈
-print(len(word))
+# # 크로아티아 알파벳을 하나의 문자로 취급하여 처리
+# for alphabet in croatia_alphabets:
+#     word = word.replace(alphabet, '*')  # 크로아티아 알파벳을 '*'로 대체
+#     # print(word)
+# # '*'로 대체된 문자열에서 알파벳 개수를 셈
+# print(len(word))
+
+# #1316번 그룹단어 체커
+# def is_group_word(word): #bool자료형으로 이전문자 아니면 반환
+#     seen = set() #등장했던 '알파벳'을 저장함. 순서구분x, 중복허용x (set의특성)
+#     prev_char = '' #이전 문자 저장
+    
+#     for i in word:
+#         if i != prev_char:      # 현재 문자가 이전 문자와 다를 때
+#             if i in seen:       # 이미 등장한 문자라면 그룹 단어가 아님
+#                 return False
+#             seen.add(prev_char) # 이전 문자를 set에 추가
+#         prev_char = i           # 이전 문자 갱신
+#     return True
+
+# N= int(input())
+# count=0
+
+# for i in range(N):
+#     word = input().strip()
+#     if is_group_word(word):
+#         count += 1
+
+# print(count)

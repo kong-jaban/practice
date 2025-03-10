@@ -68,8 +68,67 @@
 #             print("파일:", item)
 # read_folder(".")
 
-# #####################################
-# 90강 - 모듈 만들기와 if __name__ == "__main__"
-#모듈 - 파일 또는 폴더를 활성해서 구성. 
-import sys
-print(sys.path)
+# # #####################################
+# # 90강 - 모듈 만들기와 if __name__ == "__main__"
+# #모듈 - 파일 또는 폴더를 활성해서 구성. 
+# import sys
+# print(sys.path)
+
+# # #####################################
+#  92강 - BeautifulSoup 외부 모듈(라이브러리) 사용해보기
+#기본내장모듈 ex) math, sys, time
+#외부모듈
+# 터미널 : pip install 모듈이름
+# pip install Flask
+# pip install beautifulsoup4
+# pip install tensorflow
+
+# # 외부모듈을 찾는 방법 
+# (1) 책에서 모듈 찾기
+# 파이썬 웹프로그래밍 : Django, Flask
+# 머신러닝 : scilit-learn, tensorflow
+# 스크레이핑 : requests, beautifulsoup
+# 영상분석 : cv2, pillow
+# (2)파이썬 커뮤니티 가입
+# > 인기 외부모듈 확인
+# (3)그냥 검색
+
+# # 간단예시 (beautifulsoup4, Flask)
+# from bs4 import BeautifulSoup
+# from urllib import request
+
+# 기상청주소 = "https://www.kma.go.kr/repositary/xml/fct/mon/img/fct_mon3rss_108_20250224.xml"
+# 데이터 = request.urlopen(기상청주소)
+
+# soup = BeautifulSoup(데이터, "html.parser")
+# # soup.select()       #특정이름을 가진 태그를 모두 찾음
+# # soup.select_one()   #특정 이름을 가진 태그 하나 찾음
+
+# for location in soup.select('local_ta'):
+#     city = location.select_one("local_ta_name").string
+#     print(city)
+
+# # #####################################
+# # 93강 - Flask 외부 모듈(프레임워크) 사용해보기
+# from flask import Flask
+
+# app = Flask(__name__)
+
+# @app.route("/")
+# def hello():
+#     return "<h1>안녕하세요!h1</h1>"
+
+# @app.route("/introduce")
+# def introduce():
+#     return "<h1>저를 introduce합니다</h1>"
+##플라스크에선 숫자로 시작할수 없음. 
+
+# 라이브러리
+#정상제어를 하는 모듈
+#정상제어: 모듈의 기능을 개발자가 직접 호출하는 것
+#(beautifulsoup)
+
+# 프레임워크
+#제어역전이 발생하는 모듈
+#제어역전 : 모듈이 개발자가 만들 기능을 호출하는 것
+#(flask)

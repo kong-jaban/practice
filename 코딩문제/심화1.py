@@ -90,10 +90,46 @@
 
 # N= int(input())
 # count=0
-
 # for i in range(N):
 #     word = input().strip()
 #     if is_group_word(word):
 #         count += 1
-
 # print(count)
+
+# 25206번 평점계산
+#전공평점은 전공과목별 (학점 × 과목평점)의 합을 학점의 총합으로 나눈 값
+#3.3이상
+grade_map = {
+    'A+': 4.5,
+    'A0': 4.0,
+    'B+': 3.5,
+    'B0': 3.0,
+    'C+': 2.5,
+    'C0': 2.0,
+    'D+': 1.5,
+    'D0': 1.0,
+    'F': 0.0
+}
+total_score = 0.0  # 총 점수
+total_grade = 0  # 총 학점
+for i in range(20):
+    name, score, grade = input().split( )
+    score = float(score)
+
+    if grade == 'P':
+        continue
+    total_score += grade_map[grade] * score
+    total_grade += score
+
+final_grade = total_score/total_grade
+print(f"{final_grade:.6f}")
+
+#함수로 풀어보기
+
+#총 신청 학점 구하는 함수
+def base_score(score):
+    score += score
+#가중치 없는학점 구하는 함수
+
+#가중치 있는 학점 구하는 함수
+
